@@ -1,0 +1,16 @@
+{
+    "pipeline": {
+      "name": "lb-pipeline"
+    },
+    "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.",
+    "transform": {
+      "cmd": [ "node", "/count.js" ],
+      "image": "--tbd--"
+    },
+    "input": {
+      "pfs": {
+        "repo": "lb-demo",
+        "glob": "/*"
+      }
+    }
+  }

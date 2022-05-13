@@ -1,0 +1,197 @@
+4.4.2172.2172|2022-05-12T22:47:53.856-04|INFO|AgentEngine: ? DeviceID 18059879-c124-329e-26c4-395f90c4806f|{  }
+4.4.2172.2172|2022-05-12T22:47:53.857-04|INFO|AgentEngine: ? On Demand = False|{  }
+4.4.2172.2172|2022-05-12T22:47:53.857-04|INFO|AgentEngine: ? Proxy in use = No|{  }
+4.4.2172.2172|2022-05-12T22:47:53.857-04|INFO|AgentEngine: ? Proxies currently found:|{  }
+4.4.2172.2172|2022-05-12T22:47:53.858-04|INFO|AgentEngine: ? ThreadPool Worker 8, I/O 8|{  }
+4.4.2172.2172|2022-05-12T22:48:51.283-04|INFO|CsControlConnection: No. of logged in devices = 1|{  }
+4.4.2172.2172|2022-05-12T22:48:51.289-04|INFO|CsControlConnection: Sending request to CS - loggedindevices|{  }
+4.4.2172.2172|2022-05-12T22:48:52.371-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T22:49:01.695-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T22:49:02.713-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T22:51:01.919-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T22:51:03.009-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T22:52:55.890-04|INFO|AgentEngine: ? CAG 2172, Host lb-lane|{  }
+4.4.2172.2172|2022-05-12T22:52:55.894-04|INFO|AgentEngine: ? OS  Unix 20.6.0.0|{  }
+4.4.2172.2172|2022-05-12T22:52:55.895-04|INFO|AgentEngine: ? CLR 4.0.30319.42000|{  }
+4.4.2172.2172|2022-05-12T22:52:55.895-04|INFO|AgentEngine: ? CS  03cc.centrastage.net|{  }
+4.4.2172.2172|2022-05-12T22:52:55.896-04|INFO|AgentEngine: ? WS zinfandel-agent.centrastage.net:443|{  }
+4.4.2172.2172|2022-05-12T22:52:55.899-04|INFO|DeviceId: Device UID read from registry as: '"18059879-c124-329e-26c4-395f90c4806f"'. In memory UID: '"18059879-c124-329e-26c4-395f90c4806f"'|{ "result": "18059879-c124-329e-26c4-395f90c4806f", "currentUID": "18059879-c124-329e-26c4-395f90c4806f" }
+4.4.2172.2172|2022-05-12T22:52:55.900-04|INFO|AgentEngine: ? DeviceID 18059879-c124-329e-26c4-395f90c4806f|{  }
+4.4.2172.2172|2022-05-12T22:52:55.901-04|INFO|AgentEngine: ? On Demand = False|{  }
+4.4.2172.2172|2022-05-12T22:52:55.901-04|INFO|AgentEngine: ? Proxy in use = No|{  }
+4.4.2172.2172|2022-05-12T22:52:55.901-04|INFO|AgentEngine: ? Proxies currently found:|{  }
+4.4.2172.2172|2022-05-12T22:52:55.906-04|INFO|AgentEngine: ? ThreadPool Worker 8, I/O 8|{  }
+4.4.2172.2172|2022-05-12T22:53:02.865-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T22:53:03.988-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T22:54:51.375-04|INFO|CsControlConnection: No. of logged in devices = 1|{  }
+4.4.2172.2172|2022-05-12T22:54:51.377-04|INFO|CsControlConnection: Sending request to CS - loggedindevices|{  }
+4.4.2172.2172|2022-05-12T22:54:52.452-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T22:55:03.059-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T22:55:04.183-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T22:57:03.960-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T22:57:05.005-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T22:57:56.183-04|INFO|AgentEngine: ? CAG 2172, Host lb-lane|{  }
+4.4.2172.2172|2022-05-12T22:57:56.224-04|INFO|AgentEngine: ? OS  Unix 20.6.0.0|{  }
+4.4.2172.2172|2022-05-12T22:57:56.224-04|INFO|AgentEngine: ? CLR 4.0.30319.42000|{  }
+4.4.2172.2172|2022-05-12T22:57:56.225-04|INFO|AgentEngine: ? CS  03cc.centrastage.net|{  }
+4.4.2172.2172|2022-05-12T22:57:56.225-04|INFO|AgentEngine: ? WS zinfandel-agent.centrastage.net:443|{  }
+4.4.2172.2172|2022-05-12T22:57:56.227-04|INFO|DeviceId: Device UID read from registry as: '"18059879-c124-329e-26c4-395f90c4806f"'. In memory UID: '"18059879-c124-329e-26c4-395f90c4806f"'|{ "result": "18059879-c124-329e-26c4-395f90c4806f", "currentUID": "18059879-c124-329e-26c4-395f90c4806f" }
+4.4.2172.2172|2022-05-12T22:57:56.228-04|INFO|AgentEngine: ? DeviceID 18059879-c124-329e-26c4-395f90c4806f|{  }
+4.4.2172.2172|2022-05-12T22:57:56.228-04|INFO|AgentEngine: ? On Demand = False|{  }
+4.4.2172.2172|2022-05-12T22:57:56.228-04|INFO|AgentEngine: ? Proxy in use = No|{  }
+4.4.2172.2172|2022-05-12T22:57:56.229-04|INFO|AgentEngine: ? Proxies currently found:|{  }
+4.4.2172.2172|2022-05-12T22:57:56.229-04|INFO|AgentEngine: ? ThreadPool Worker 8, I/O 8|{  }
+4.4.2172.2172|2022-05-12T22:59:04.198-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T22:59:05.340-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T23:00:51.860-04|INFO|CsControlConnection: No. of logged in devices = 1|{  }
+4.4.2172.2172|2022-05-12T23:00:51.865-04|INFO|CsControlConnection: Sending request to CS - loggedindevices|{  }
+4.4.2172.2172|2022-05-12T23:00:52.949-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T23:01:04.631-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T23:01:05.693-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T23:02:56.490-04|INFO|AgentEngine: ? CAG 2172, Host lb-lane|{  }
+4.4.2172.2172|2022-05-12T23:02:56.493-04|INFO|AgentEngine: ? OS  Unix 20.6.0.0|{  }
+4.4.2172.2172|2022-05-12T23:02:56.493-04|INFO|AgentEngine: ? CLR 4.0.30319.42000|{  }
+4.4.2172.2172|2022-05-12T23:02:56.494-04|INFO|AgentEngine: ? CS  03cc.centrastage.net|{  }
+4.4.2172.2172|2022-05-12T23:02:56.494-04|INFO|AgentEngine: ? WS zinfandel-agent.centrastage.net:443|{  }
+4.4.2172.2172|2022-05-12T23:02:56.496-04|INFO|DeviceId: Device UID read from registry as: '"18059879-c124-329e-26c4-395f90c4806f"'. In memory UID: '"18059879-c124-329e-26c4-395f90c4806f"'|{ "result": "18059879-c124-329e-26c4-395f90c4806f", "currentUID": "18059879-c124-329e-26c4-395f90c4806f" }
+4.4.2172.2172|2022-05-12T23:02:56.497-04|INFO|AgentEngine: ? DeviceID 18059879-c124-329e-26c4-395f90c4806f|{  }
+4.4.2172.2172|2022-05-12T23:02:56.498-04|INFO|AgentEngine: ? On Demand = False|{  }
+4.4.2172.2172|2022-05-12T23:02:56.498-04|INFO|AgentEngine: ? Proxy in use = No|{  }
+4.4.2172.2172|2022-05-12T23:02:56.498-04|INFO|AgentEngine: ? Proxies currently found:|{  }
+4.4.2172.2172|2022-05-12T23:02:56.499-04|INFO|AgentEngine: ? ThreadPool Worker 8, I/O 8|{  }
+4.4.2172.2172|2022-05-12T23:03:04.672-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T23:03:05.683-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T23:05:04.763-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T23:05:07.067-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T23:22:24.020-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T23:22:24.799-04|WARN|CsControlConnection: No response from CS in 150s, disconnecting|{  }
+4.4.2172.2172|2022-05-12T23:22:24.848-04|INFO|CsControlConnection: No. of logged in devices = 1|{  }
+4.4.2172.2172|2022-05-12T23:22:25.050-04|INFO|CsControlConnection: CsControlConnection() - Closing down.|{  }
+4.4.2172.2172|2022-05-12T23:22:25.204-04|INFO|CsControlConnection: Sending request to CS - loggedindevices|{  }
+4.4.2172.2172|2022-05-12T23:22:25.367-04|WARN|CsControlConnection: Failed to send a message|{ "exception": {"Message":"Cannot access a disposed object.\nObject name: 'SslStream'.", "ObjectName":"SslStream", "Data":{}, "TargetSite":"Void CheckDisposed()", "StackTrace":"  at System.Net.Security.SslStream.CheckDisposed () [0x00008] in <23340a11bb41423aa895298bf881ed68>:0 \n  at System.Net.Security.SslStream.get_Impl () [0x00000] in <23340a11bb41423aa895298bf881ed68>:0 \n  at System.Net.Security.SslStream.Write (System.Byte[] buffer, System.Int32 offset, System.Int32 count) [0x00000] in <23340a11bb41423aa895298bf881ed68>:0 \n  at CentraStage.Cag.Core.Http.Connection.WriteEntireRequestFromString (System.String extraHeader, System.String ToUrl, System.String body) [0x00033] in <70a8e8127b3e4542b9d73bb2cb34f27f>:0 \n  at CentraStage.Cag.Core.Communications.CsControlConnection.ThreadPoolCSMessageQueueWork (System.Object target) [0x000e1] in <70a8e8127b3e4542b9d73bb2cb34f27f>:0 ", "Source":"System", "HResult":-2146232798} }
+4.4.2172.2172|2022-05-12T23:22:25.409-04|INFO|CsControlConnection: UDPClientAccepted|{ "exception": {"Message":"Object reference not set to an instance of an object", "Data":{}, "TargetSite":"Void UDPClientAccepted(System.IAsyncResult)", "StackTrace":"  at CentraStage.Cag.Core.Communications.CsControlConnection.UDPClientAccepted (System.IAsyncResult result) [0x00017] in <70a8e8127b3e4542b9d73bb2cb34f27f>:0 ", "Source":"Core", "HResult":-2147467261} }
+4.4.2172.2172|2022-05-12T23:22:26.474-04|INFO|CsConnection: Logging in to CS 03cc.centrastage.net:443|{  }
+4.4.2172.2172|2022-05-12T23:22:27.818-04|INFO|CsConnection: GetCsLoginData started|{  }
+4.4.2172.2172|2022-05-12T23:22:32.531-04|INFO|MonitorScheduler: Loading monitors from Local Cache...|{  }
+4.4.2172.2172|2022-05-12T23:22:32.717-04|INFO|MonitorScheduler: Caching monitors...|{  }
+4.4.2172.2172|2022-05-12T23:22:32.868-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:22:32.883-04|INFO|MonitorScheduler: Applying 0 Default Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:22:32.885-04|INFO|MonitorScheduler: Applying 0 Recommended Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:22:32.894-04|INFO|MonitorScheduler: Applying 0 User Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:22:32.898-04|INFO|MonitorScheduler: Skipping 0 ESXi Monitors. ESXi monitoring is not available.|{  }
+4.4.2172.2172|2022-05-12T23:22:44.846-04|INFO|Deploy: Since we are offline, we are not doing any deployment|{  }
+4.4.2172.2172|2022-05-12T23:23:03.157-04|INFO|MonitorScheduler: Loading monitors from Local Cache...|{  }
+4.4.2172.2172|2022-05-12T23:23:03.235-04|INFO|MonitorScheduler: Caching monitors...|{  }
+4.4.2172.2172|2022-05-12T23:23:03.288-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:23:03.302-04|INFO|MonitorScheduler: Applying 0 Default Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:23:03.311-04|INFO|MonitorScheduler: Applying 0 Recommended Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:23:03.314-04|INFO|MonitorScheduler: Applying 0 User Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:23:03.317-04|INFO|MonitorScheduler: Skipping 0 ESXi Monitors. ESXi monitoring is not available.|{  }
+4.4.2172.2172|2022-05-12T23:24:04.542-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:24:04.622-04|INFO|MonitorScheduler: Loading monitors from Local Cache...|{  }
+4.4.2172.2172|2022-05-12T23:24:04.677-04|INFO|MonitorScheduler: Caching monitors...|{  }
+4.4.2172.2172|2022-05-12T23:24:04.688-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:24:04.691-04|INFO|MonitorScheduler: Applying 0 Default Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:24:04.711-04|INFO|MonitorScheduler: Applying 0 Recommended Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:24:04.769-04|INFO|MonitorScheduler: Applying 0 User Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:24:04.790-04|INFO|MonitorScheduler: Skipping 0 ESXi Monitors. ESXi monitoring is not available.|{  }
+4.4.2172.2172|2022-05-12T23:24:04.881-04|INFO|Deploy: Since we are offline, we are not doing any deployment|{  }
+4.4.2172.2172|2022-05-12T23:24:11.329-04|INFO|CsConnection: GetCsLoginData finished|{  }
+4.4.2172.2172|2022-05-12T23:24:11.414-04|INFO|DeviceId: Device UID read from registry as: '"18059879-c124-329e-26c4-395f90c4806f"'. In memory UID: '"18059879-c124-329e-26c4-395f90c4806f"'|{ "result": "18059879-c124-329e-26c4-395f90c4806f", "currentUID": "18059879-c124-329e-26c4-395f90c4806f" }
+4.4.2172.2172|2022-05-12T23:24:11.531-04|INFO|Login: Device UID exists OK|{  }
+4.4.2172.2172|2022-05-12T23:24:11.575-04|INFO|Login: AccountUid is zind07c0001|{  }
+4.4.2172.2172|2022-05-12T23:24:11.765-04|INFO|Login: Splashtop enabled = True|{  }
+4.4.2172.2172|2022-05-12T23:24:11.766-04|INFO|Login: Splashtop shall be installed or updated = True|{  }
+4.4.2172.2172|2022-05-12T23:24:11.767-04|INFO|Login: Splashtop Streamer URL  = https://update-zinfandel.centrastage.net/splashtop/SplashtopStreamer|{  }
+4.4.2172.2172|2022-05-12T23:24:11.769-04|INFO|Login: Splashtop Client URL  = https://update-zinfandel.centrastage.net/splashtop/SplashtopClient|{  }
+4.4.2172.2172|2022-05-12T23:24:11.772-04|INFO|Login: UltraVnc enabled = True|{  }
+4.4.2172.2172|2022-05-12T23:24:11.777-04|INFO|Login: SNMP Network Monitor = False|{  }
+4.4.2172.2172|2022-05-12T23:24:11.804-04|INFO|DeviceId: Device UID read from registry as: '"18059879-c124-329e-26c4-395f90c4806f"'. In memory UID: '"18059879-c124-329e-26c4-395f90c4806f"'|{ "result": "18059879-c124-329e-26c4-395f90c4806f", "currentUID": "18059879-c124-329e-26c4-395f90c4806f" }
+4.4.2172.2172|2022-05-12T23:24:11.809-04|INFO|Login: PerformanceData - perfdata.interval = 24 (CS)|{  }
+4.4.2172.2172|2022-05-12T23:24:11.811-04|INFO|Login: TS DNS address 'ts.centrastage.net'|{  }
+4.4.2172.2172|2022-05-12T23:24:11.815-04|INFO|Login: Network Control Proxy Domain |{  }
+4.4.2172.2172|2022-05-12T23:24:11.817-04|INFO|CsConnection: CAG Version = 4.4.2172.2172|{  }
+4.4.2172.2172|2022-05-12T23:24:11.818-04|INFO|CsConnection: IsSuspended = False|{  }
+4.4.2172.2172|2022-05-12T23:24:11.819-04|INFO|CsConnection: AllowSuspensionAutoReset = True|{  }
+4.4.2172.2172|2022-05-12T23:24:11.820-04|INFO|CsConnection: AlertThreshhold = 20|{  }
+4.4.2172.2172|2022-05-12T23:24:11.820-04|INFO|CsConnection: On Demand = False|{  }
+4.4.2172.2172|2022-05-12T23:24:11.822-04|INFO|CsConnection: Web Service Address overriden on CS to - zinfandel-agent.centrastage.net:443|{  }
+4.4.2172.2172|2022-05-12T23:24:11.825-04|INFO|CsControlConnection: Starting UDP on 13300|{  }
+4.4.2172.2172|2022-05-12T23:24:11.846-04|INFO|CsControlConnection: Connected to Cs server|{  }
+4.4.2172.2172|2022-05-12T23:24:11.848-04|INFO|CsControlConnection: Ping interval is 120s|{  }
+4.4.2172.2172|2022-05-12T23:24:11.849-04|INFO|CsControlConnection: Logged in devices interval is 360s|{  }
+4.4.2172.2172|2022-05-12T23:24:14.136-04|INFO|LoggedInDevices: Login expired for 13edbfd9-2450-4f84-9613-bb0ee67e7ffa|{  }
+4.4.2172.2172|2022-05-12T23:24:14.138-04|INFO|CsControlConnection: Sending request to CS - loggedoutdevice|{  }
+4.4.2172.2172|2022-05-12T23:24:14.202-04|INFO|CsConnection: Web port ok = True|{  }
+4.4.2172.2172|2022-05-12T23:24:15.350-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T23:24:35.100-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:24:38.052-04|INFO|MonitorScheduler: Caching monitors...|{  }
+4.4.2172.2172|2022-05-12T23:24:38.076-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:24:38.079-04|INFO|MonitorScheduler: Applying 0 Default Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:24:38.080-04|INFO|MonitorScheduler: Applying 0 Recommended Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:24:38.109-04|INFO|MonitorScheduler: Applying 0 User Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:24:38.115-04|INFO|MonitorScheduler: Skipping 0 ESXi Monitors. ESXi monitoring is not available.|{  }
+4.4.2172.2172|2022-05-12T23:55:01.893-04|INFO|CsControlConnection: Sending request to CS - ping|{  }
+4.4.2172.2172|2022-05-12T23:55:01.094-04|WARN|CsControlConnection: No response from CS in 150s, disconnecting|{  }
+4.4.2172.2172|2022-05-12T23:55:02.819-04|INFO|CsControlConnection: No. of logged in devices = 1|{  }
+4.4.2172.2172|2022-05-12T23:55:02.993-04|INFO|CsControlConnection: Sending request to CS - loggedindevices|{  }
+4.4.2172.2172|2022-05-12T23:55:03.222-04|WARN|CsControlConnection: Failed to send a message|{ "exception": {"InnerExceptions":[{"Message":"Cannot access a disposed object.\nObject name: 'MobileAuthenticatedStream'.", "ObjectName":"MobileAuthenticatedStream", "Data":{}, "TargetSite":"Void Throw()", "StackTrace":"  at Mono.Net.Security.MobileAuthenticatedStream.CheckThrow (System.Boolean authSuccessCheck, System.Boolean shutdownCheck) [0x00008] in <23340a11bb41423aa895298bf881ed68>:0 \n  at Mono.Net.Security.MobileAuthenticatedStream.StartOperation (Mono.Net.Security.MobileAuthenticatedStream+OperationType type, Mono.Net.Security.AsyncProtocolRequest asyncRequest, System.Threading.CancellationToken cancellationToken) [0x00014] in <23340a11bb41423aa895298bf881ed68>:0 ", "Source":"mscorlib", "HResult":-2146232798}], "Message":"One or more errors occurred.", "Data":{}, "InnerException":{"Message":"Cannot access a disposed object.\nObject name: 'MobileAuthenticatedStream'.", "ObjectName":"MobileAuthenticatedStream", "Data":{}, "TargetSite":"Void Throw()", "StackTrace":"  at Mono.Net.Security.MobileAuthenticatedStream.CheckThrow (System.Boolean authSuccessCheck, System.Boolean shutdownCheck) [0x00008] in <23340a11bb41423aa895298bf881ed68>:0 \n  at Mono.Net.Security.MobileAuthenticatedStream.StartOperation (Mono.Net.Security.MobileAuthenticatedStream+OperationType type, Mono.Net.Security.AsyncProtocolRequest asyncRequest, System.Threading.CancellationToken cancellationToken) [0x00014] in <23340a11bb41423aa895298bf881ed68>:0 ", "Source":"mscorlib", "HResult":-2146232798}, "TargetSite":"Void ThrowIfExceptional(Boolean)", "StackTrace":"  at System.Threading.Tasks.Task.ThrowIfExceptional (System.Boolean includeTaskCanceledExceptions) [0x00011] in <4ce69280878a4ebdbc54175071d7ecdf>:0 \n  at System.Threading.Tasks.Task.Wait (System.Int32 millisecondsTimeout, System.Threading.CancellationToken cancellationToken) [0x00043] in <4ce69280878a4ebdbc54175071d7ecdf>:0 \n  at System.Threading.Tasks.Task.Wait () [0x00000] in <4ce69280878a4ebdbc54175071d7ecdf>:0 \n  at Mono.Net.Security.MobileAuthenticatedStream.Write (System.Byte[] buffer, System.Int32 offset, System.Int32 count) [0x00018] in <23340a11bb41423aa895298bf881ed68>:0 \n  at System.Net.Security.SslStream.Write (System.Byte[] buffer, System.Int32 offset, System.Int32 count) [0x00006] in <23340a11bb41423aa895298bf881ed68>:0 \n  at CentraStage.Cag.Core.Http.Connection.WriteEntireRequestFromString (System.String extraHeader, System.String ToUrl, System.String body) [0x00033] in <70a8e8127b3e4542b9d73bb2cb34f27f>:0 \n  at CentraStage.Cag.Core.Communications.CsControlConnection.ThreadPoolCSMessageQueueWork (System.Object target) [0x000e1] in <70a8e8127b3e4542b9d73bb2cb34f27f>:0 ", "Source":"mscorlib", "HResult":-2146233088} }
+4.4.2172.2172|2022-05-12T23:55:03.249-04|INFO|CsControlConnection: CsControlConnection() - Closing down.|{  }
+4.4.2172.2172|2022-05-12T23:55:04.623-04|INFO|CsControlConnection: UDPClientAccepted|{ "exception": {"Message":"Object reference not set to an instance of an object", "Data":{}, "TargetSite":"Void UDPClientAccepted(System.IAsyncResult)", "StackTrace":"  at CentraStage.Cag.Core.Communications.CsControlConnection.UDPClientAccepted (System.IAsyncResult result) [0x00017] in <70a8e8127b3e4542b9d73bb2cb34f27f>:0 ", "Source":"Core", "HResult":-2147467261} }
+4.4.2172.2172|2022-05-12T23:55:05.685-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:55:06.257-04|INFO|AgentEngine: ? CAG 2172, Host lb-lane|{  }
+4.4.2172.2172|2022-05-12T23:55:06.263-04|INFO|AgentEngine: ? OS  Unix 20.6.0.0|{  }
+4.4.2172.2172|2022-05-12T23:55:06.273-04|INFO|AgentEngine: ? CLR 4.0.30319.42000|{  }
+4.4.2172.2172|2022-05-12T23:55:06.275-04|INFO|AgentEngine: ? CS  03cc.centrastage.net|{  }
+4.4.2172.2172|2022-05-12T23:55:06.279-04|INFO|AgentEngine: ? WS zinfandel-agent.centrastage.net:443|{  }
+4.4.2172.2172|2022-05-12T23:55:06.306-04|INFO|DeviceId: Device UID read from registry as: '"18059879-c124-329e-26c4-395f90c4806f"'. In memory UID: '"18059879-c124-329e-26c4-395f90c4806f"'|{ "result": "18059879-c124-329e-26c4-395f90c4806f", "currentUID": "18059879-c124-329e-26c4-395f90c4806f" }
+4.4.2172.2172|2022-05-12T23:55:06.326-04|INFO|AgentEngine: ? DeviceID 18059879-c124-329e-26c4-395f90c4806f|{  }
+4.4.2172.2172|2022-05-12T23:55:06.327-04|INFO|AgentEngine: ? On Demand = False|{  }
+4.4.2172.2172|2022-05-12T23:55:06.328-04|INFO|AgentEngine: ? Proxy in use = No|{  }
+4.4.2172.2172|2022-05-12T23:55:06.328-04|INFO|AgentEngine: ? Proxies currently found:|{  }
+4.4.2172.2172|2022-05-12T23:55:06.341-04|INFO|AgentEngine: ? ThreadPool Worker 8, I/O 8|{  }
+4.4.2172.2172|2022-05-12T23:55:06.349-04|INFO|MonitorScheduler: Loading monitors from Local Cache...|{  }
+4.4.2172.2172|2022-05-12T23:55:06.362-04|INFO|MonitorScheduler: Caching monitors...|{  }
+4.4.2172.2172|2022-05-12T23:55:06.368-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:55:06.369-04|INFO|MonitorScheduler: Applying 0 Default Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:55:06.369-04|INFO|MonitorScheduler: Applying 0 Recommended Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:55:06.369-04|INFO|MonitorScheduler: Applying 0 User Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:55:06.371-04|INFO|MonitorScheduler: Skipping 0 ESXi Monitors. ESXi monitoring is not available.|{  }
+4.4.2172.2172|2022-05-12T23:55:06.374-04|INFO|Deploy: Since we are offline, we are not doing any deployment|{  }
+4.4.2172.2172|2022-05-12T23:55:06.381-04|INFO|CsConnection: Logging in to CS 03cc.centrastage.net:443|{  }
+4.4.2172.2172|2022-05-12T23:55:12.041-04|INFO|CsConnection: GetCsLoginData started|{  }
+4.4.2172.2172|2022-05-12T23:55:14.096-04|INFO|CsConnection: GetCsLoginData finished|{  }
+4.4.2172.2172|2022-05-12T23:55:14.107-04|INFO|DeviceId: Device UID read from registry as: '"18059879-c124-329e-26c4-395f90c4806f"'. In memory UID: '"18059879-c124-329e-26c4-395f90c4806f"'|{ "result": "18059879-c124-329e-26c4-395f90c4806f", "currentUID": "18059879-c124-329e-26c4-395f90c4806f" }
+4.4.2172.2172|2022-05-12T23:55:14.110-04|INFO|Login: Device UID exists OK|{  }
+4.4.2172.2172|2022-05-12T23:55:14.120-04|INFO|Login: AccountUid is zind07c0001|{  }
+4.4.2172.2172|2022-05-12T23:55:14.275-04|INFO|Login: Splashtop enabled = True|{  }
+4.4.2172.2172|2022-05-12T23:55:14.276-04|INFO|Login: Splashtop shall be installed or updated = True|{  }
+4.4.2172.2172|2022-05-12T23:55:14.283-04|INFO|Login: Splashtop Streamer URL  = https://update-zinfandel.centrastage.net/splashtop/SplashtopStreamer|{  }
+4.4.2172.2172|2022-05-12T23:55:14.285-04|INFO|Login: Splashtop Client URL  = https://update-zinfandel.centrastage.net/splashtop/SplashtopClient|{  }
+4.4.2172.2172|2022-05-12T23:55:14.286-04|INFO|Login: UltraVnc enabled = True|{  }
+4.4.2172.2172|2022-05-12T23:55:14.290-04|INFO|Login: SNMP Network Monitor = False|{  }
+4.4.2172.2172|2022-05-12T23:55:14.319-04|INFO|DeviceId: Device UID read from registry as: '"18059879-c124-329e-26c4-395f90c4806f"'. In memory UID: '"18059879-c124-329e-26c4-395f90c4806f"'|{ "result": "18059879-c124-329e-26c4-395f90c4806f", "currentUID": "18059879-c124-329e-26c4-395f90c4806f" }
+4.4.2172.2172|2022-05-12T23:55:14.327-04|INFO|Login: PerformanceData - perfdata.interval = 24 (CS)|{  }
+4.4.2172.2172|2022-05-12T23:55:14.329-04|INFO|Login: TS DNS address 'ts.centrastage.net'|{  }
+4.4.2172.2172|2022-05-12T23:55:14.336-04|INFO|Login: Network Control Proxy Domain |{  }
+4.4.2172.2172|2022-05-12T23:55:14.337-04|INFO|CsConnection: CAG Version = 4.4.2172.2172|{  }
+4.4.2172.2172|2022-05-12T23:55:14.338-04|INFO|CsConnection: IsSuspended = False|{  }
+4.4.2172.2172|2022-05-12T23:55:14.340-04|INFO|CsConnection: AllowSuspensionAutoReset = True|{  }
+4.4.2172.2172|2022-05-12T23:55:14.347-04|INFO|CsConnection: AlertThreshhold = 20|{  }
+4.4.2172.2172|2022-05-12T23:55:14.348-04|INFO|CsConnection: On Demand = False|{  }
+4.4.2172.2172|2022-05-12T23:55:14.361-04|INFO|CsConnection: Web Service Address overriden on CS to - zinfandel-agent.centrastage.net:443|{  }
+4.4.2172.2172|2022-05-12T23:55:14.364-04|INFO|CsControlConnection: Starting UDP on 13300|{  }
+4.4.2172.2172|2022-05-12T23:55:14.375-04|INFO|CsControlConnection: Connected to Cs server|{  }
+4.4.2172.2172|2022-05-12T23:55:14.378-04|INFO|CsControlConnection: Ping interval is 120s|{  }
+4.4.2172.2172|2022-05-12T23:55:14.380-04|INFO|CsControlConnection: Logged in devices interval is 360s|{  }
+4.4.2172.2172|2022-05-12T23:55:15.919-04|INFO|CsConnection: Web port ok = True|{  }
+4.4.2172.2172|2022-05-12T23:55:16.654-04|INFO|LoggedInDevices: Login expired for 8f743641-6917-424e-b0df-fa104fadecb3|{  }
+4.4.2172.2172|2022-05-12T23:55:16.656-04|INFO|CsControlConnection: Sending request to CS - loggedoutdevice|{  }
+4.4.2172.2172|2022-05-12T23:55:17.884-04|INFO|CsControlConnection: Response is Http - 200|{  }
+4.4.2172.2172|2022-05-12T23:55:36.586-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:55:37.803-04|INFO|MonitorScheduler: Caching monitors...|{  }
+4.4.2172.2172|2022-05-12T23:55:37.809-04|INFO|MonitorScheduler: Writing 0 Alerts to cache...|{  }
+4.4.2172.2172|2022-05-12T23:55:37.811-04|INFO|MonitorScheduler: Applying 0 Default Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:55:37.811-04|INFO|MonitorScheduler: Applying 0 Recommended Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:55:37.812-04|INFO|MonitorScheduler: Applying 0 User Monitors...|{  }
+4.4.2172.2172|2022-05-12T23:55:37.813-04|INFO|MonitorScheduler: Skipping 0 ESXi Monitors. ESXi monitoring is not available.|{  }
