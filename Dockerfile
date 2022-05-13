@@ -3,8 +3,13 @@ FROM ubuntu:20.04
 ENV TZ=UTC
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - 
-RUN apt-get install -y nodejs
+RUN apt-get update && apt-get install -y \
+    software-properties-common \
+    npm
+RUN npm install npm@latest -g && \
+    npm install n -g && \
+    n latest
+    
 
 # Add our own code.
 ADD count.js /count.js

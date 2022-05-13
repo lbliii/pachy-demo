@@ -16,6 +16,11 @@ Use the command `pachctl list repo` to see all of your Pachyderm repositories.
 3. View
     `pachctl get file lb-demo@master:log1.txt | open -f -a Preview.app` 
 
-## 3. Create a Pipeline 
+
+## 3. Build Docker Image 
+
+`docker build -t lbliii/lb-demo:1.0 .` 
+
+## 4. Create a Pipeline 
 
 
