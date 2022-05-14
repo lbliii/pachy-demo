@@ -5,7 +5,7 @@
     "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.",
     "transform": {
       "cmd": [ "go run", "/count.go" ],
-      "image": "lbliii/lb-demo"
+      "image": "lbliii/lb-demo:1.0"
     },
     "input": {
       "pfs": {
