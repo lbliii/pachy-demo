@@ -4,7 +4,7 @@
     },
     "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.",
     "transform": {
-      "cmd": [ "node", "/count.js" ],
+      "cmd": [ "python", "/count.py" ],
       "image": "--tbd--"
     },
     "input": {
