@@ -6,11 +6,12 @@ const fs = require('fs')
 const path = require('path')
 const totalWarningsAndErrors = {warnings: 0, errors: 0}
 
-for (const file of fs.readdirSync(path.join(__dirname, 'logs'))) {
+for (const file of fs.readdirSync(path.join(__dirname, '/pfs/lb-demo/logs'))) {
     // console.log(file) 
-    contents = fs.readFileSync(path.join(__dirname, 'logs', file), 'utf8')
+    contents = fs.readFileSync(path.join(__dirname, '/pfs/lb-demo/logs', file), 'utf8')
     const lines = contents.split('\n')
     for (const line of lines) {
+        //TODO: Edge cases? 
         if (line.includes('WARN')) {
             totalWarningsAndErrors.warnings++
         }
@@ -23,7 +24,7 @@ for (const file of fs.readdirSync(path.join(__dirname, 'logs'))) {
 // console.log(totalWarningsAndErrors) 
 
 const createResultsFile = () => {
-    fs.writeFileSync(path.join(__dirname, 'results.txt'), JSON.stringify(totalWarningsAndErrors))
+    fs.writeFileSync(path.join(__dirname, '/pfs/out/results.txt'), JSON.stringify(totalWarningsAndErrors))
 }
 
 createResultsFile()

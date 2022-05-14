@@ -1,19 +1,31 @@
-// count the number of warnings and errors in the current file
-// and return the results in a new text file
+import os
 
-def get_warnings(file):
-    warnings = 0
-    with open(file, 'r') as f:
-        for line in f:
-            if 'WARN' in line:
-                warnings += 1
-    return warnings
+def main():
+    warnings = 0 
+    errors = 0 
+    files = os.listdir('/pfs/lb-demo/logs')
+    # print(files)
+    for file in files:
+        with open('/pfs/lb-demo/logs/' + file, 'r') as f:
+            lines = f.readlines()
+            for line in lines:
+                # TODO: edge cases? 
+                if 'WARN' in line:
+                    warnings += 1
+                if 'ERR' in line:
+                    errors += 1
+    write_results(warnings, errors)
+    # print('Warnings: ' + str(warnings))
+    # print('Errors: ' + str(errors))
 
-def get_errors(file):
-    errors = 0
-    with open(file, 'r') as f:
-        for line in f:
-            if 'ERROR' in line:
-                errors += 1
-    return errors
+
+# create a results.txt file and write the total warnings and errors.
+
+def write_results(warnings, errors):
+    with open('results.txt', 'w') as f:
+        f.write('Warnings: ' + str(warnings) + '\n')
+        f.write('Errors: ' + str(errors))
+
+  
+main()
 
