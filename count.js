@@ -20,4 +20,10 @@ for (const file of fs.readdirSync(path.join(__dirname, 'logs'))) {
     }
 }
 
-console.log(totalWarningsAndErrors) 
+// console.log(totalWarningsAndErrors) 
+
+const createResultsFile = () => {
+    fs.writeFileSync(path.join(__dirname, 'results.txt'), JSON.stringify(totalWarningsAndErrors))
+}
+
+createResultsFile()

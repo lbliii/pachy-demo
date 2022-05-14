@@ -26,6 +26,7 @@ func main() {
 	}
 	fmt.Println("errorCount:", errorCount)
 	fmt.Println("warningCount:", warningCount)
+	createResultsFile(errorCount, warningCount)
 }
 
 func readFile(filename string) string {
@@ -45,4 +46,13 @@ func countWarningsAndErrors(content string) {
 			warningCount++
 		}
 	}
+}
+
+func createResultsFile(errorCount int, warningCount int) {
+	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
+	file := ioutil.WriteFile("results.txt", []byte(results), 0644)
+	if file != nil {
+		log.Fatal(file)
+	}
+
 }
