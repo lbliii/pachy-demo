@@ -14,7 +14,7 @@ Use the command `pachctl list repo` to see all of your Pachyderm repositories.
 2. Verify the log file was added:
     `pachctl list file lb-demo@master`
 3. View
-    `pachctl get file lb-demo@master:log1.txt | open -f -a Preview.app` 
+    `pachctl get file lb-demo@master:log1.txt | open -f -a TextEdit.app` 
 
 
 ## 3. Build Docker Image 

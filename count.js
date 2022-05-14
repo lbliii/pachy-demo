@@ -4,20 +4,20 @@
 
 const fs = require('fs')
 const path = require('path')
+const totalWarningsAndErrors = {warnings: 0, errors: 0}
 
-const count = (file) => {
-    const filePath = path.join(__dirname, file)
-    const content = fs.readFileSync(filePath, 'utf8')
-    const lines = content.split('\n')
-    const errors = lines.filter(line => line.includes('ERR')).length
-    const warnings = lines.filter(line => line.includes('WARN')).length
-    const results = `${errors} errors, ${warnings} warnings`
-    const resultsPath = path.join(__dirname, 'results.txt')
-    fs.writeFileSync(resultsPath, results)
+for (const file of fs.readdirSync(path.join(__dirname, 'logs'))) {
+    // console.log(file) 
+    contents = fs.readFileSync(path.join(__dirname, 'logs', file), 'utf8')
+    const lines = contents.split('\n')
+    for (const line of lines) {
+        if (line.includes('WARN')) {
+            totalWarningsAndErrors.warnings++
+        }
+        if (line.includes('ERR')) {
+            totalWarningsAndErrors.errors++
+        }
     }
-
-// for each file in /pfs/lb-demo, count the number of errors and warnings
-
-for (const file of fs.readdirSync(path.join(__dirname, 'lb-demo'))) {
-    count(file)
 }
+
+console.log(totalWarningsAndErrors) 

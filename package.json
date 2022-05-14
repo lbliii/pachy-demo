@@ -1,0 +1,19 @@
+{
+  "name": "pachy-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "count.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbliii/pachy-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lbliii/pachy-demo/issues"
+  },
+  "homepage": "https://github.com/lbliii/pachy-demo#readme"
+}
