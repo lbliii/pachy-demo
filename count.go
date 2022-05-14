@@ -13,14 +13,14 @@ var (
 )
 
 func main() {
-	files, err := ioutil.ReadDir("/pfs/lb-demo/logs")
+	files, err := ioutil.ReadDir("/pfs/logs")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, file := range files {
 		// fmt.Println(file.Name())
-		content := readFile("/pfs/lb-demo/logs/" + file.Name())
+		content := readFile("/pfs/logs/" + file.Name())
 		// fmt.Println(content)
 		countWarningsAndErrors(content)
 	}

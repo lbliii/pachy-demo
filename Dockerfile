@@ -2,19 +2,15 @@
 
 FROM golang:1.16-alpine
 
-WORKDIR /app 
+WORKDIR / 
 
 COPY go.mod ./
-
 
 RUN go mod download
 
 COPY *.go ./
 
-COPY /logs/ ./
+COPY logs/ ./logs/
 
-RUN go build -o /docker-gs-ping
 
-EXPOSE 8080
-
-CMD [ "/docker-gs-ping" ]
+CMD ["go", "run", "count.go"]
