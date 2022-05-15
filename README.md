@@ -59,6 +59,8 @@ Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeli
 
 ### Pipeline Template 
 
+#### JSON Version
+
 ```json 
 {
     "pipeline": {
@@ -72,9 +74,91 @@ Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeli
     "input": {
       "pfs": { // The Pachyderm file system
         "repo": "lb-demo", // The repository name 
-        "glob": "/*" 
+        "glob": "/*" // A global pattern used to return all matching files; example: pachctl glob file <repo>@<branch-or-commit>:<pattern> [flags]
       }
     }
   }
 ```
 
+#### YAML Version
+
+```yaml
+pipeline:
+  name: lb-pipeline
+description: A pipeline that counts WARNING and ERROR occurrences in one or many log files.
+transform:
+  cmd:
+    - go run
+    - /count.go
+  image: lbliii/lb-demo:1.0
+input:
+  pfs:
+    repo: lb-demo
+    glob: /*
+```
+
+### About Count.go
+
+The following code block contains all of the details of our executable `count.go` file:  
+
+```go 
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+	"log"
+	"strings"
+)
+
+var (  // Creates globally accessible variables to count errors and warnings; used as data written to results.txt 
+	errorCount   int
+	warningCount int
+)
+
+func main() { 
+	files, err := ioutil.ReadDir("/pfs/logs") // Traverses all of the logs 
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, file := range files { 
+		// fmt.Println(file.Name())
+		content := readFile("/pfs/logs/" + file.Name()) // Reads the contents of the .txt file
+		// fmt.Println(content)
+		countWarningsAndErrors(content) // Counts Errors and Warnings
+	}
+	// fmt.Println("errorCount:", errorCount)
+	// fmt.Println("warningCount:", warningCount)
+	createResultsFile(errorCount, warningCount) // Creates the results.txt file 
+}
+
+func readFile(filename string) string {
+	content, err := ioutil.ReadFile(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	return string(content)
+}
+
+//TODO: Edge cases?
+func countWarningsAndErrors(content string) {
+	lines := strings.Split(content, "\n")
+	for _, line := range lines {
+		if strings.Contains(line, "ERR") {
+			errorCount++
+		} else if strings.Contains(line, "WARN") {
+			warningCount++
+		}
+	}
+}
+
+func createResultsFile(errorCount int, warningCount int) {
+	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
+	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644)
+	if file != nil {
+		log.Fatal(file)
+	}
+
+}
+```
