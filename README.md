@@ -32,13 +32,19 @@ lb-demo           31 hours ago   ≤ 292.3KiB
 Uploading data to your repository requires use of the [pachctl put file](https://docs.pachyderm.com/latest/reference/pachctl/pachctl_put_file) command. Using this command, you can put **files**, **images**, **data**, or whole **directories** into your repository.
 
 1. Find or create example log files that include warning and error messages. 
-2. Use the following command to commit a log file to the `lb-demo` repo: `pachctl put file lb-demo@master:log1.txt -f /Users/lblane/Documents/pachy/logs/log1.txt`.
+2. Use the following command to commit a log file to the `lb-demo` repo: 
+   ```
+   pachctl put file lb-demo@master:log1.txt -f /Users/lblane/Documents/pachy/logs/log1.txt
+   ```
 3. Verify the log file was added: `pachctl list file lb-demo@master`.
    ```
    NAME      TYPE SIZE     
    /log1.txt file 292.3KiB 
    ```
-4. Optionally, you can view the file: `pachctl get file lb-demo@master:log1.txt | open -f -a TextEdit.app`.
+4. Optionally, you can view the file: 
+   ```
+   pachctl get file lb-demo@master:log1.txt | open -f -a TextEdit.app
+   ```
 5. Repeat for as many files or directories necessary. 
 
 **✏️ NOTE**: Pachyderm commits are similar to git commits. Here's a quick breakdown of the format:
@@ -57,7 +63,7 @@ Uploading data to your repository requires use of the [pachctl put file](https:/
 Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeline-concepts/pipeline/#pipeline). A pipeline reads, transforms, and outputs data. To use a pipeline, you must define a pipeline schema (either in `JSON` or `YAML`). 
 
 
-### Pipeline Template 
+### Define Pipeline Schema 
 
 #### JSON Version
 
@@ -97,7 +103,7 @@ input:
     glob: /*
 ```
 
-### About Count.go
+#### About Count.go
 
 The following code block contains all of the details of our executable `count.go` file:  
 
@@ -123,13 +129,9 @@ func main() {
 	}
 
 	for _, file := range files { 
-		// fmt.Println(file.Name())
 		content := readFile("/pfs/logs/" + file.Name()) // Reads the contents of the .txt file
-		// fmt.Println(content)
 		countWarningsAndErrors(content) // Counts Errors and Warnings
 	}
-	// fmt.Println("errorCount:", errorCount)
-	// fmt.Println("warningCount:", warningCount)
 	createResultsFile(errorCount, warningCount) // Creates the results.txt file 
 }
 
@@ -141,7 +143,6 @@ func readFile(filename string) string {
 	return string(content)
 }
 
-//TODO: Edge cases?
 func countWarningsAndErrors(content string) {
 	lines := strings.Split(content, "\n")
 	for _, line := range lines {
@@ -155,10 +156,33 @@ func countWarningsAndErrors(content string) {
 
 func createResultsFile(errorCount int, warningCount int) {
 	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
-	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644)
+	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644) // IMPORTANT: Always write to /pfs/out. 
 	if file != nil {
 		log.Fatal(file)
 	}
 
 }
+```
+**💡 TIP**: You can also check out examples in [Javascript](https://github.com/lbliii/pachy-demo/blob/main/count.js) and [Python](https://github.com/lbliii/pachy-demo/blob/main/count.py). 
+
+### Submit Pipeline Schema to Pachyderm 
+
+Submitting a pipeline schema to Pachyderm requires using the [pachctl create pipeline](https://docs.pachyderm.com/latest/reference/pachctl/pachctl_create_pipeline/) command. Using this command, you can push `JSON`, `YAML`, `Jsonnet`, and local Docker images to Pachyderm.
+
+1. Open a terminal.
+2. Run the following command: 
+   ``` 
+   pachctl create pipeline -f https://raw.githubusercontent.com/lbliii/pachy-demo/main/lb-pipeline.json
+   ```
+
+Once submitted, the pipeline automatically runs a [job](https://docs.pachyderm.com/latest/concepts/pipeline-concepts/job/#job) using the code that transforms and outputs your data.  
+
+**✏️ NOTE**: You can use the command `pachctl list job` to see a list of jobs. 
+
+## Check the Output 
+
+-WIP-
+
+```
+pachctl get file lb-demo@master:results.txt | open -f -a TextEdit.app
 ```
