@@ -20,7 +20,7 @@ Make sure all of the following tools are installed on your machine:
 1. Open a terminal. 
 2. Use the following command to build your repo: `pachctl create repo lb-demo`
 
-**💡**: You can use the command `pachctl list repo` to see all of your Pachyderm repositories. 
+**💡 TIP**: You can use the command `pachctl list repo` to see all of your Pachyderm repositories. 
 
 ```
 NAME              CREATED        SIZE (MASTER) DESCRIPTION                           
@@ -41,16 +41,17 @@ Uploading data to your repository requires use of the [pachctl put file](https:/
 4. Optionally, you can view the file: `pachctl get file lb-demo@master:log1.txt | open -f -a TextEdit.app`.
 5. Repeat for as many files or directories necessary. 
 
-**✏️**: Pachyderm commits are similar to git commits. Here's a quick breakdown of the format:
+**✏️ NOTE**: Pachyderm commits are similar to git commits. Here's a quick breakdown of the format:
    ```
    {reponame}@{branch}:filename.extension -f /Path/of/file.txt
    ```
 
-**💡**: Have a directory of log files? You can use `pachctl put file -r repo@branch -f {dirName}` to upload it with one command. 
+**💡 TIP**: Have a directory of log files? You can use `pachctl put file -r repo@branch -f {dirName}` to upload it with one command. 
 
 ## 3. Create a Pipeline 
 
 ✅ We've got our repository set up. 
+
 ✅ We've committed log data.
 
 Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeline-concepts/pipeline/#pipeline). A pipeline reads, transforms, and outputs data. To use a pipeline, you must define a pipeline schema (either in `JSON` or `YAML`). 
@@ -61,18 +62,19 @@ Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeli
 ```json 
 {
     "pipeline": {
-      "name": "lb-pipeline"
+      "name": "lb-pipeline" // Displayed when using the following command: pachctl list pipeline
     },
-    "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.",
+    "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.", // Displayed when using the following command: pachctl list pipeline
     "transform": {
-      "cmd": [ "go run", "/count.go" ],
-      "image": "lbliii/lb-demo:1.0"
+      "cmd": [ "go run", "/count.go" ], // The command that executes the data transformation & output
+      "image": "lbliii/lb-demo:1.0" // The Docker image containing the scripts/logic needed to transform the data. 
     },
     "input": {
-      "pfs": {
-        "repo": "lb-demo",
-        "glob": "/*"
+      "pfs": { // The Pachyderm file system
+        "repo": "lb-demo", // The repository name 
+        "glob": "/*" 
       }
     }
   }
 ```
+
