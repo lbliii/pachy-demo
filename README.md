@@ -123,13 +123,13 @@ var (  // Creates globally accessible variables to count errors and warnings; us
 )
 
 func main() { 
-	files, err := ioutil.ReadDir("/pfs/logs") // Traverses all of the logs 
+	files, err := ioutil.ReadDir("/logs") // Traverses all of the logs 
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, file := range files { 
-		content := readFile("/pfs/logs/" + file.Name()) // Reads the contents of the .txt file
+		content := readFile("/logs/" + file.Name()) // Reads the contents of the .txt file
 		countWarningsAndErrors(content) // Counts Errors and Warnings
 	}
 	createResultsFile(errorCount, warningCount) // Creates the results.txt file 
