@@ -1,6 +1,6 @@
 {
     "pipeline": {
-      "name": "lb-pipeline"
+      "name": "lb-pipeline2"
     },
     "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.",
     "transform": {
