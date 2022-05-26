@@ -17,27 +17,23 @@ func main() {
 }
 
 func traverseLogs() {
+	// traverse all .txt files
+
 	files, err := ioutil.ReadDir("pfs/lb-pachy-project")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, file := range files {
-		// fmt.Println(file.Name())
-		content := readFile("pfs/lb-pachy-project/" + file.Name())
-		// fmt.Println(content)
-		countWarningsAndErrors(content)
+		// only look at .txt files
+		if strings.HasSuffix(file.Name(), ".txt") {
+			content, err := ioutil.ReadFile("pfs/lb-pachy-project/" + file.Name())
+			if err != nil {
+				log.Fatal(err)
+			}
+			countWarningsAndErrors(string(content))
+		}
 	}
-	// fmt.Println("errorCount:", errorCount)
-	// fmt.Println("warningCount:", warningCount)
-}
-
-func readFile(filename string) string {
-	content, err := ioutil.ReadFile(filename)
-	if err != nil {
-		log.Fatal(err)
-	}
-	return string(content)
 }
 
 //TODO: Edge cases?
@@ -55,7 +51,7 @@ func countWarningsAndErrors(content string) {
 
 func createResultsFile(errorCount int, warningCount int) {
 	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
-	file := ioutil.WriteFile("pfs/out/results.txt", []byte(results), 0644)
+	file := ioutil.WriteFile("/results.txt", []byte(results), 0644)
 	if file != nil {
 		log.Fatal(file)
 	}
