@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"os"
 	"strings"
 )
 
@@ -18,17 +17,16 @@ func main() {
 }
 
 func traverseLogs() {
-	files, err := ioutil.ReadDir("/pfs/lb-pachy-project")
+	files, err := ioutil.ReadDir("pfs/lb-pachy-project")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, file := range files {
 		// fmt.Println(file.Name())
-		content := readFile("/pfs/lb-pachy-project/" + file.Name())
+		content := readFile("pfs/lb-pachy-project/" + file.Name())
 		// fmt.Println(content)
-		fileName := file.Name()
-		countWarningsAndErrors(content, fileName)
+		countWarningsAndErrors(content)
 	}
 	// fmt.Println("errorCount:", errorCount)
 	// fmt.Println("warningCount:", warningCount)
@@ -52,30 +50,12 @@ func countWarningsAndErrors(content string) {
 			warningCount++
 		}
 	}
-	// if results.txt exists, update it, otherwise create it
-	if _, err := os.Stat("/pfs/out/results.txt"); err == nil {
-		createResultsFile(errorCount, warningCount)
-
-	} else {
-		updateResultsFile(errorCount, warningCount)
-	}
-
+	createResultsFile(errorCount, warningCount)
 }
 
 func createResultsFile(errorCount int, warningCount int) {
 	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
-	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644)
-	if file != nil {
-		log.Fatal(file)
-	}
-
-}
-
-// if results.txt exists, update it with the new counts
-
-func updateResultsFile(errorCount int, warningCount int) {
-	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
-	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644)
+	file := ioutil.WriteFile("pfs/out/results.txt", []byte(results), 0644)
 	if file != nil {
 		log.Fatal(file)
 	}

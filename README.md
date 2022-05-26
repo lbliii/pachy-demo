@@ -193,5 +193,5 @@ Once submitted, the pipeline automatically runs a [job](https://docs.pachyderm.c
 -WIP-
 
 ```
-pachctl get file lb-demo@master:results.txt | open -f -a TextEdit.app
+pachctl get file lb-pachy-project@master:results.txt | open -f -a TextEdit.app
 ```
