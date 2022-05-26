@@ -3,10 +3,10 @@ import os
 def main():
     warnings = 0 
     errors = 0 
-    files = os.listdir('/pfs/lb-demo/logs')
+    files = os.listdir('/pfs/lb-pachy-project')
     # print(files)
     for file in files:
-        with open('/pfs/lb-demo/logs/' + file, 'r') as f:
+        with open('/pfs/lb-pachy-project/' + file, 'r') as f:
             lines = f.readlines()
             for line in lines:
                 # TODO: edge cases? 

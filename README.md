@@ -24,7 +24,7 @@ Make sure all of the following tools are installed on your machine:
 
 ```
 NAME              CREATED        SIZE (MASTER) DESCRIPTION                           
-lb-demo           31 hours ago   ≤ 292.3KiB  
+lb-pachy-project           31 hours ago   ≤ 292.3KiB  
 ```
 
 ## 2. Upload Data (Log Files)
@@ -34,9 +34,9 @@ Uploading data to your repository requires use of the [pachctl put file](https:/
 1. Find or create example log files that include warning and error messages. 
 2. Use the following command to commit a log file to the `lb-demo` repo: 
    ```
-   pachctl put file lb-demo@master:log1.txt -f /Users/lblane/Documents/pachy/logs/log1.txt
+   pachctl put file lb-pachy-project@master:log1.txt -f /Users/lblane/Documents/pachy/logs/log1.txt
    ```
-3. Verify the log file was added: `pachctl list file lb-demo@master`.
+3. Verify the log file was added: `pachctl list file lb-pachy-project@master`.
    ```
    NAME      TYPE SIZE     
    /log1.txt file 292.3KiB 

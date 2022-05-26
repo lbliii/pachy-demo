@@ -6,9 +6,9 @@ const fs = require('fs')
 const path = require('path')
 const totalWarningsAndErrors = {warnings: 0, errors: 0}
 
-for (const file of fs.readdirSync(path.join(__dirname, '/pfs/lb-demo/logs'))) {
+for (const file of fs.readdirSync(path.join(__dirname, '/pfs/lb-pachy-project'))) {
     // console.log(file) 
-    contents = fs.readFileSync(path.join(__dirname, '/pfs/lb-demo/logs', file), 'utf8')
+    contents = fs.readFileSync(path.join(__dirname, '/pfs/lb-pachy-project', file), 'utf8')
     const lines = contents.split('\n')
     for (const line of lines) {
         //TODO: Edge cases? 

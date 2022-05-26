@@ -30,7 +30,6 @@ func traverseLogs() {
 	}
 	// fmt.Println("errorCount:", errorCount)
 	// fmt.Println("warningCount:", warningCount)
-	createResultsFile(errorCount, warningCount)
 }
 
 func readFile(filename string) string {
@@ -51,6 +50,7 @@ func countWarningsAndErrors(content string) {
 			warningCount++
 		}
 	}
+	createResultsFile(errorCount, warningCount)
 }
 
 func createResultsFile(errorCount int, warningCount int) {
