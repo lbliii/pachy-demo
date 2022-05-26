@@ -1,15 +1,15 @@
 {
     "pipeline": {
-      "name": "lb-pipeline2"
+      "name": "project-pipeline"
     },
     "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.",
     "transform": {
       "cmd": [ "go run", "/count.go" ],
-      "image": "lbliii/lb-demo:1.0"
+      "image": "lbliii/lb-pachy-project:1.0"
     },
     "input": {
       "pfs": {
-        "repo": "lb-demo",
+        "repo": "lb-pachy-project",
         "glob": "/*"
       }
     }

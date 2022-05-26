@@ -13,14 +13,18 @@ var (
 )
 
 func main() {
-	files, err := ioutil.ReadDir("logs")
+	traverseLogs()
+}
+
+func traverseLogs() {
+	files, err := ioutil.ReadDir("/pfs/lb-pachy-project")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, file := range files {
 		// fmt.Println(file.Name())
-		content := readFile("logs/" + file.Name())
+		content := readFile("/pfs/lb-pachy-project/" + file.Name())
 		// fmt.Println(content)
 		countWarningsAndErrors(content)
 	}
@@ -51,7 +55,7 @@ func countWarningsAndErrors(content string) {
 
 func createResultsFile(errorCount int, warningCount int) {
 	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
-	file := ioutil.WriteFile("results.txt", []byte(results), 0644)
+	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644)
 	if file != nil {
 		log.Fatal(file)
 	}
