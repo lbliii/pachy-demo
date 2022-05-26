@@ -1,6 +1,6 @@
 {
     "pipeline": {
-      "name": "project-pipeline"
+      "name": "lb-pachy-project-pipeline"
     },
     "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.",
     "transform": {
