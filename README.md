@@ -70,16 +70,16 @@ Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeli
 ```json 
 {
     "pipeline": {
-      "name": "lb-pipeline" // Displayed when using the following command: pachctl list pipeline
+      "name": "lb-pachy-project-pipeline" // Displayed when using the following command: pachctl list pipeline
     },
     "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.", // Displayed when using the following command: pachctl list pipeline
     "transform": {
       "cmd": [ "go run", "/count.go" ], // The command that executes the data transformation & output
-      "image": "lbliii/lb-demo:1.0" // The Docker image containing the scripts/logic needed to transform the data. 
+      "image": "lbliii/lb-pachy-project:1.0" // The Docker image containing the scripts/logic needed to transform the data. 
     },
     "input": {
       "pfs": { // The Pachyderm file system
-        "repo": "lb-demo", // The repository name 
+        "repo": "lb-pachy-project", // The repository name 
         "glob": "/*" // A global pattern used to return all matching files; example: pachctl glob file <repo>@<branch-or-commit>:<pattern> [flags]
       }
     }
@@ -90,16 +90,16 @@ Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeli
 
 ```yaml
 pipeline:
-  name: lb-pipeline
+  name: lb-pachy-project-pipeline
 description: A pipeline that counts WARNING and ERROR occurrences in one or many log files.
 transform:
   cmd:
     - go run
     - /count.go
-  image: lbliii/lb-demo:1.0
+  image: lbliii/lb-pachy-project:1.0
 input:
   pfs:
-    repo: lb-demo
+    repo: lb-pachy-project
     glob: /*
 ```
 
@@ -117,22 +117,30 @@ import (
 	"strings"
 )
 
-var (  // Creates globally accessible variables to count errors and warnings; used as data written to results.txt 
+var (
 	errorCount   int
 	warningCount int
 )
 
-func main() { 
-	files, err := ioutil.ReadDir("/logs") // Traverses all of the logs 
+func main() {
+	traverseLogs()
+}
+
+func traverseLogs() {
+	files, err := ioutil.ReadDir("/pfs/lb-pachy-project")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	for _, file := range files { 
-		content := readFile("/logs/" + file.Name()) // Reads the contents of the .txt file
-		countWarningsAndErrors(content) // Counts Errors and Warnings
+	for _, file := range files {
+		// fmt.Println(file.Name())
+		content := readFile("/pfs/lb-pachy-project/" + file.Name())
+		// fmt.Println(content)
+		countWarningsAndErrors(content)
 	}
-	createResultsFile(errorCount, warningCount) // Creates the results.txt file 
+	// fmt.Println("errorCount:", errorCount)
+	// fmt.Println("warningCount:", warningCount)
+	createResultsFile(errorCount, warningCount)
 }
 
 func readFile(filename string) string {
@@ -143,6 +151,7 @@ func readFile(filename string) string {
 	return string(content)
 }
 
+//TODO: Edge cases?
 func countWarningsAndErrors(content string) {
 	lines := strings.Split(content, "\n")
 	for _, line := range lines {
@@ -156,7 +165,7 @@ func countWarningsAndErrors(content string) {
 
 func createResultsFile(errorCount int, warningCount int) {
 	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
-	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644) // IMPORTANT: Always write to /pfs/out. 
+	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644)
 	if file != nil {
 		log.Fatal(file)
 	}
