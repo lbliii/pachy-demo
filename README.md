@@ -18,7 +18,7 @@ Make sure all of the following tools are installed on your machine:
 [Pachyderm repositories](https://docs.pachyderm.com/latest/concepts/data-concepts/repo/#repository) are a top-level data object that accept all file types. Similar to Git, you can make changes to your repository by pushing [commits](https://docs.pachyderm.com/latest/concepts/data-concepts/commit/#commit) containing files and folders. We will use this repository to send new log files to get processed.
 
 1. Open a terminal. 
-2. Use the following command to build your repo: `pachctl create repo lb-demo`
+2. Use the following command to build your repo: `pachctl create repo lb-pachy-project`
 
 **💡 TIP**: You can use the command `pachctl list repo` to see all of your Pachyderm repositories. 
 
@@ -32,7 +32,7 @@ lb-pachy-project           31 hours ago   ≤ 292.3KiB
 Uploading data to your repository requires use of the [pachctl put file](https://docs.pachyderm.com/latest/reference/pachctl/pachctl_put_file) command. Using this command, you can put **files**, **images**, **data**, or whole **directories** into your repository.
 
 1. Find or create example log files that include warning and error messages. 
-2. Use the following command to commit a log file to the `lb-demo` repo: 
+2. Use the following command to commit a log file to the `lb-pachy-project` repo: 
    ```
    pachctl put file lb-pachy-project@master:log1.txt -f /Users/lblane/Documents/pachy/logs/log1.txt
    ```
@@ -43,7 +43,7 @@ Uploading data to your repository requires use of the [pachctl put file](https:/
    ```
 4. Optionally, you can view the file: 
    ```
-   pachctl get file lb-demo@master:log1.txt | open -f -a TextEdit.app
+   pachctl get file lb-pachy-project@master:log1.txt | open -f -a TextEdit.app
    ```
 5. Repeat for as many files or directories necessary. 
 
