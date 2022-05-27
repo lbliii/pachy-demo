@@ -49,7 +49,7 @@ Uploading data to your repository requires use of the [pachctl put file](https:/
 
 **✏️ NOTE**: Pachyderm commits are similar to git commits. Here's a quick breakdown of the format:
    ```
-   {reponame}@{branch}:filename.extension -f /Path/of/file.txt
+   {repoName}@{branch}:{fileName}.{extension} -f /Path/of/file.txt
    ```
 
 **💡 TIP**: Have a directory of log files? You can use `pachctl put file -r repo@branch -f {dirName}` to upload it with one command. 
@@ -62,7 +62,14 @@ Uploading data to your repository requires use of the [pachctl put file](https:/
 
 Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeline-concepts/pipeline/#pipeline). A pipeline reads, transforms, and outputs data. To use a pipeline, you must define a pipeline schema (either in `JSON` or `YAML`). Pipelines also create repos using the pipeline's name.
 
-**💡 TIP**: Use a prefix, such as `p-` to visually distinguish pipeline-dependent output repos versus input repos.
+**💡 TIP**: Use a prefix, such as `p-`, in the pipeline's name to visually distinguish pipeline-dependent output repos versus input repos when using the `pachctl list repo` command.
+
+   ```
+   lblane@lb-lane ~ % pachctl list repo                                                             
+   NAME               CREATED           SIZE (MASTER) DESCRIPTION                                  
+   p-lb-pachy-project About an hour ago ≤ 29B         Output repo for pipeline p-lb-pachy-project. 
+   lb-pachy-project   About an hour ago ≤ 24.84KiB  
+   ```
 
 ### Define Pipeline Schema 
 
@@ -127,31 +134,23 @@ func main() {
 }
 
 func traverseLogs() {
+
 	files, err := ioutil.ReadDir("/pfs/lb-pachy-project")
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	for _, file := range files {
-		// fmt.Println(file.Name())
-		content := readFile("/pfs/lb-pachy-project/" + file.Name())
-		// fmt.Println(content)
-		countWarningsAndErrors(content)
+		if strings.HasSuffix(file.Name(), ".txt") {
+			content, err := ioutil.ReadFile("/pfs/lb-pachy-project/" + file.Name())
+			if err != nil {
+				log.Fatal(err)
+			}
+			countWarningsAndErrors(string(content))
+		}
 	}
-	// fmt.Println("errorCount:", errorCount)
-	// fmt.Println("warningCount:", warningCount)
-	createResultsFile(errorCount, warningCount)
 }
 
-func readFile(filename string) string {
-	content, err := ioutil.ReadFile(filename)
-	if err != nil {
-		log.Fatal(err)
-	}
-	return string(content)
-}
-
-//TODO: Edge cases?
 func countWarningsAndErrors(content string) {
 	lines := strings.Split(content, "\n")
 	for _, line := range lines {
@@ -161,6 +160,7 @@ func countWarningsAndErrors(content string) {
 			warningCount++
 		}
 	}
+	createResultsFile(errorCount, warningCount)
 }
 
 func createResultsFile(errorCount int, warningCount int) {

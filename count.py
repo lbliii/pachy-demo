@@ -22,7 +22,7 @@ def main():
 # create a results.txt file and write the total warnings and errors.
 
 def write_results(warnings, errors):
-    with open('results.txt', 'w') as f:
+    with open('/pfs/out/results.txt', 'w') as f:
         f.write('Warnings: ' + str(warnings) + '\n')
         f.write('Errors: ' + str(errors))
 
