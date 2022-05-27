@@ -195,3 +195,13 @@ You can download and view the output of the `results.txt` file using the followi
 ```
 pachctl get file lb-pachy-project@master:results.txt | open -f -a TextEdit.app
 ```
+
+### Example Output 
+
+```
+errorCount: 0
+warningCount: 4
+```
+---
+
+That's it! You've now successfully built a log processing pipeline using Pachyderm. 🎉
