@@ -19,7 +19,7 @@ func main() {
 func traverseLogs() {
 	// traverse all .txt files
 
-	files, err := ioutil.ReadDir("pfs/lb-pachy-project")
+	files, err := ioutil.ReadDir("/pfs/lb-pachy-project")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -27,7 +27,7 @@ func traverseLogs() {
 	for _, file := range files {
 		// only look at .txt files
 		if strings.HasSuffix(file.Name(), ".txt") {
-			content, err := ioutil.ReadFile("pfs/lb-pachy-project/" + file.Name())
+			content, err := ioutil.ReadFile("/pfs/lb-pachy-project/" + file.Name())
 			if err != nil {
 				log.Fatal(err)
 			}
@@ -51,7 +51,7 @@ func countWarningsAndErrors(content string) {
 
 func createResultsFile(errorCount int, warningCount int) {
 	results := "errorCount: " + fmt.Sprint(errorCount) + "\n" + "warningCount: " + fmt.Sprint(warningCount)
-	file := ioutil.WriteFile("/results.txt", []byte(results), 0644)
+	file := ioutil.WriteFile("/pfs/out/results.txt", []byte(results), 0644)
 	if file != nil {
 		log.Fatal(file)
 	}
