@@ -60,8 +60,9 @@ Uploading data to your repository requires use of the [pachctl put file](https:/
 
 ✅ We've committed log data.
 
-Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeline-concepts/pipeline/#pipeline). A pipeline reads, transforms, and outputs data. To use a pipeline, you must define a pipeline schema (either in `JSON` or `YAML`). 
+Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeline-concepts/pipeline/#pipeline). A pipeline reads, transforms, and outputs data. To use a pipeline, you must define a pipeline schema (either in `JSON` or `YAML`). Pipelines also create repos using the pipeline's name.
 
+**💡 TIP**: Use a prefix, such as `p-` to visually distinguish pipeline-dependent output repos versus input repos.
 
 ### Define Pipeline Schema 
 
@@ -70,12 +71,12 @@ Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeli
 ```json 
 {
     "pipeline": {
-      "name": "lb-pachy-project-pipeline" // Displayed when using the following command: pachctl list pipeline
+      "name": "p-lb-pachy-project" // Displayed when using the following command: pachctl list pipeline
     },
     "description": "A pipeline that counts WARNING and ERROR occurrences in one or many log files.", // Displayed when using the following command: pachctl list pipeline
     "transform": {
-      "cmd": [ "go run", "/count.go" ], // The command that executes the data transformation & output
-      "image": "lbliii/lb-pachy-project:1.0" // The Docker image containing the scripts/logic needed to transform the data. 
+      "cmd": [ "./count" ], // The command that executes the data transformation & output
+      "image": "lbliii/lb-pachy-project:5.0" // The Docker image containing the scripts/logic needed to transform the data. 
     },
     "input": {
       "pfs": { // The Pachyderm file system
@@ -90,13 +91,12 @@ Now, let's create a [pipeline](https://docs.pachyderm.com/latest/concepts/pipeli
 
 ```yaml
 pipeline:
-  name: lb-pachy-project-pipeline
+  name: p-lb-pachy-project
 description: A pipeline that counts WARNING and ERROR occurrences in one or many log files.
 transform:
   cmd:
-    - go run
-    - /count.go
-  image: lbliii/lb-pachy-project:1.0
+    - ./count 
+  image: lbliii/lb-pachy-project:5.0
 input:
   pfs:
     repo: lb-pachy-project
@@ -190,7 +190,7 @@ Once submitted, the pipeline automatically runs a [job](https://docs.pachyderm.c
 
 ## Check the Output 
 
--WIP-
+You can download and view the output of the `results.txt` file using the following command: 
 
 ```
 pachctl get file lb-pachy-project@master:results.txt | open -f -a TextEdit.app
